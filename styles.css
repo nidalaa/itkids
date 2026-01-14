@@ -1,0 +1,212 @@
+/* Colors extracted from reference files */
+:root {
+    --offwhite: #eef5f0;
+    --dark-green: #1b5e40;
+    --light-green: #d4e8da;
+    --medium-green: #2e7d55;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--offwhite);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+
+/* Sekcja 1: Hero */
+.hero-section {
+    width: 100%;
+}
+
+.hero-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.hexagon-decoration {
+    max-width: 250px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.hexagon-left {
+    margin-right: 40px;
+}
+
+.hexagon-right {
+    margin-left: 40px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sekcja 2: About */
+.about-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(27, 94, 64, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.photo-card img:hover {
+    transform: scale(1.02);
+}
+
+/* Sekcja 3: CTA */
+.cta-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: var(--dark-green);
+    color: var(--offwhite);
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(27, 94, 64, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--medium-green);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(27, 94, 64, 0.4);
+}
+
+/* Sekcja 4: Description */
+.description-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.description-box {
+    background-color: var(--light-green);
+    padding: 40px 50px;
+    border-radius: 16px;
+}
+
+.description-box p {
+    color: var(--dark-green);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.description-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sekcja 5: Workshops (pusta) */
+.workshops-section {
+    min-height: 200px;
+    padding: 60px 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hexagon-decoration {
+        max-width: 150px;
+    }
+    
+    .hexagon-left {
+        margin-right: 20px;
+    }
+    
+    .hexagon-right {
+        margin-left: 20px;
+    }
+    
+    .photos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .about-tagline {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .hexagon-left,
+    .hexagon-right {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
+    
+    .description-box {
+        padding: 25px 20px;
+    }
+}
