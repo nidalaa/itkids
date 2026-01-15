@@ -60,6 +60,7 @@ body {
 
 .hero-image {
     width: 70%;
+    margin: auto;
 }
 
 .hero-image img {
@@ -201,9 +202,9 @@ body {
         font-size: 2rem;
     }
 
-    .hero-section {
+    .hero-image {
     width: 100%;
-}
+    }
     
     .cta-button {
         padding: 15px 35px;
