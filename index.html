@@ -1,72 +1,87 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Kids - warsztaty technologiczne dla dzieci</title>
-    <meta name="description" content="IT Kids - warsztaty technologiczne dla dzieci.">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids Tech Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sekcja 1: Tytuł z grafikami -->
-    <!-- <header class="hero-section">
-        <div class="hero-title-container">
-            <h1 class="hero-title">IT KIDS</h1>
-        </div>
-        <div class="hero-image">
-            <img src="/images/labels.png" alt="programowanie, elektronika, AI, komunikacja międzyludzka">
-        </div>
-    </header> -->
 
-    <!-- Sekcja 2: Opis + 3 zdjęcia -->
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hexagon-pattern-left">
+        <!-- SVG LEFT -->
+        <!-- (bez zmian – skrócone dla czytelności) -->
+      </div>
+
+      <h1 class="main-title">Kids Tech Lab</h1>
+
+      <div class="hexagon-pattern-right">
+        <!-- SVG RIGHT -->
+      </div>
+    </section>
+
+    <div class="hero-image">
+      <span>[ Placeholder - obrazek na całą szerokość ]</span>
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <p class="intro-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <div class="images-grid">
+        <div class="hexagon-placeholder">[ Zdjęcie 1 ]</div>
+        <div class="hexagon-placeholder">[ Zdjęcie 2 ]</div>
+        <div class="hexagon-placeholder">[ Zdjęcie 3 ]</div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <button class="cta-button" id="scrollToWorkshops">
+        Sprawdź moje warsztaty
+      </button>
+    </section>
+
+    <!-- ABOUT -->
     <section class="about-section">
-        <p class="about-tagline">
-            Jestem Emilia, oswajam z dziećmi świat technologii, który może się jawić jako wyzwanie.
-        </p>
-         <p class="about-tagline">
-            Strona w budowie, rozpoczynam działalność od lutego.
-         </p>
-         <p class="about-tagline">
-            Kontakt kontakt@itkids.pl
-        </p>
-        <!-- <div class="photos-grid">
-            <div class="photo-card">
-                <img src="/images/photo1.png" alt="Zdjęcie z warsztatów 1">
-            </div>
-            <div class="photo-card">
-                <img src="/images/photo2.png" alt="Zdjęcie z warsztatów 2">
-            </div>
-            <div class="photo-card">
-                <img src="/images/photo3.png" alt="Zdjęcie z warsztatów 3">
-            </div>
-        </div> -->
+      <div class="about-box">
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Duis aute irure dolor...</p>
+        <p>Sed ut perspiciatis...</p>
+      </div>
     </section>
 
-    <!-- Sekcja 3: Przycisk CTA -->
-    <!-- <section class="cta-section">
-        <button class="cta-button" onclick="scrollToWorkshops()">Sprawdź moje warsztaty</button>
-    </section> -->
-
-    <!-- Sekcja 4: Akapit z zielonym tłem -->
-    <!-- <section class="description-section">
-        <div class="description-box">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-            </p>
-        </div>
-    </section> -->
-
-    <!-- Sekcja 5: Pusta sekcja na opis warsztatów -->
+    <!-- WORKSHOPS -->
     <section class="workshops-section" id="workshops">
-        <!-- Tutaj pojawi się opis warsztatów -->
-        <div class="hero-image">
-            <img src="./images/workshops_desc.png" alt="programowanie, elektronika, AI, komunikacja międzyludzka">
-        </div>
+      <h2 class="workshops-title">Warsztaty technologiczne dla dzieci</h2>
+      <p class="workshops-subtitle">Twórcze zajęcia łączące naukę z zabawą</p>
+
+      <div class="clients-grid">
+        <div class="client-hexagon" data-client="przedszkolaki">Przedszkolaki</div>
+        <div class="client-hexagon" data-client="mlodsi">Młodsi uczniowie</div>
+        <div class="client-hexagon" data-client="starsi">Starsi uczniowie</div>
+        <div class="client-hexagon" data-client="nastolatkowie">Nastolatkowie</div>
+      </div>
     </section>
 
-    <script src="script.js"></script>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay hidden" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">×</button>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <ul class="modal-list" id="modalList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

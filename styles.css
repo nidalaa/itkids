@@ -1,216 +1,106 @@
-/* Colors extracted from reference files */
-:root {
-    --offwhite: #eef5f0;
-    --dark-green: #1b5e40;
-    --light-green: #d4e8da;
-    --medium-green: #2e7d55;
-}
-
-/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--offwhite);
-    color: var(--dark-green);
-    line-height: 1.6;
+  background: #eef3f0;
+  font-family: 'Inter', sans-serif;
+  color: #196b5a;
 }
 
-/* Sekcja 1: Hero */
 .hero-section {
-    width: 100%;
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.hero-title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    position: relative;
-    overflow: hidden;
-    min-height: 200px;
-}
-
-.hexagon-decoration {
-    max-width: 250px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.hexagon-left {
-    margin-right: 40px;
-}
-
-.hexagon-right {
-    margin-left: 40px;
-}
-
-.hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--dark-green);
-    text-align: center;
-    white-space: nowrap;
-    z-index: 1;
+.main-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .hero-image {
-    width: 70%;
-    margin: auto;
+  height: 80px;
+  background: linear-gradient(135deg, #ddeae3, #e0ede6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.intro-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-/* Sekcja 2: About */
-.about-section {
-    padding: 200px 20px 0px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.about-tagline {
-    font-size: 1.5rem;
-    font-style: italic;
-    text-align: center;
-    color: var(--dark-green);
-    margin-bottom: 12px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.photo-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(27, 94, 64, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.photo-card img:hover {
-    transform: scale(1.02);
-}
-
-/* Sekcja 3: CTA */
 .cta-section {
-    padding: 60px 20px;
-    text-align: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .cta-button {
-    background-color: var(--dark-green);
-    color: var(--offwhite);
-    border: none;
-    padding: 20px 50px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(27, 94, 64, 0.3);
+  background: #196b5a;
+  color: #fff;
+  padding: 20px 50px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.cta-button:hover {
-    background-color: var(--medium-green);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(27, 94, 64, 0.4);
-}
-
-/* Sekcja 4: Description */
-.description-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.description-box {
-    background-color: var(--light-green);
-    padding: 40px 50px;
-    border-radius: 16px;
-}
-
-.description-box p {
-    color: var(--dark-green);
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.description-box p:last-child {
-    margin-bottom: 0;
-}
-
-/* Sekcja 5: Workshops (pusta) */
 .workshops-section {
-    min-height: 200px;
-    padding: 60px 20px;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hexagon-decoration {
-        max-width: 150px;
-    }
-    
-    .hexagon-left {
-        margin-right: 20px;
-    }
-    
-    .hexagon-right {
-        margin-left: 20px;
-    }
-    
-    .photos-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .about-tagline {
-        font-size: 1.2rem;
-    }
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-@media (max-width: 600px) {
-    .hero-title-container {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-    
-    .hexagon-left,
-    .hexagon-right {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
+.client-hexagon {
+  background: #ddeae3;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+}
 
-    .hero-image {
-    width: 100%;
-    }
-    
-    .cta-button {
-        padding: 15px 35px;
-        font-size: 1.1rem;
-    }
-    
-    .description-box {
-        padding: 25px 20px;
-    }
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #eef3f0;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
