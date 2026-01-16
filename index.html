@@ -2,86 +2,142 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kids Tech Lab</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="page">
+<div class="page-wrapper">
 
-    <!-- HERO -->
-    <section class="hero-section">
-      <div class="hexagon-pattern-left">
-        <!-- SVG LEFT -->
-        <!-- (bez zmian – skrócone dla czytelności) -->
+  <!-- HERO -->
+  <section class="hero-section">
+    <h1 class="main-title">Kids Tech Lab</h1>
+  </section>
+
+  <div class="hero-image">
+    <span>[ Placeholder - obrazek na całą szerokość ]</span>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <p class="intro-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="images-grid">
+      <div className="hexagon-placeholder">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="105" textAnchor="middle" fill="#196b5a" fontSize="14">[ Zdjęcie 1 ]</text>
+        </svg>
       </div>
-
-      <h1 class="main-title">Kids Tech Lab</h1>
-
-      <div class="hexagon-pattern-right">
-        <!-- SVG RIGHT -->
+      <div className="hexagon-placeholder">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="105" textAnchor="middle" fill="#196b5a" fontSize="14">[ Zdjęcie 2 ]</text>
+        </svg>
       </div>
-    </section>
-
-    <div class="hero-image">
-      <span>[ Placeholder - obrazek na całą szerokość ]</span>
+      <div className="hexagon-placeholder">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="105" textAnchor="middle" fill="#196b5a" fontSize="14">[ Zdjęcie 3 ]</text>
+        </svg>
+      </div>
     </div>
+    </div>
+  </section>
 
-    <!-- INTRO -->
-    <section class="intro-section">
-      <p class="intro-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  <!-- CTA -->
+  <section class="cta-section">
+    <button class="cta-button" id="scrollToWorkshops">
+      Sprawdź moje warsztaty
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div className="about-box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
-
-      <div class="images-grid">
-        <div class="hexagon-placeholder">[ Zdjęcie 1 ]</div>
-        <div class="hexagon-placeholder">[ Zdjęcie 2 ]</div>
-        <div class="hexagon-placeholder">[ Zdjęcie 3 ]</div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <button class="cta-button" id="scrollToWorkshops">
-        Sprawdź moje warsztaty
-      </button>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about-section">
-      <div class="about-box">
-        <p>Lorem ipsum dolor sit amet...</p>
-        <p>Duis aute irure dolor...</p>
-        <p>Sed ut perspiciatis...</p>
-      </div>
-    </section>
-
-    <!-- WORKSHOPS -->
-    <section class="workshops-section" id="workshops">
-      <h2 class="workshops-title">Warsztaty technologiczne dla dzieci</h2>
-      <p class="workshops-subtitle">Twórcze zajęcia łączące naukę z zabawą</p>
-
-      <div class="clients-grid">
-        <div class="client-hexagon" data-client="przedszkolaki">Przedszkolaki</div>
-        <div class="client-hexagon" data-client="mlodsi">Młodsi uczniowie</div>
-        <div class="client-hexagon" data-client="starsi">Starsi uczniowie</div>
-        <div class="client-hexagon" data-client="nastolatkowie">Nastolatkowie</div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- MODAL -->
-  <div class="modal-overlay hidden" id="modal">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal">×</button>
-      <h3 class="modal-title" id="modalTitle"></h3>
-      <ul class="modal-list" id="modalList"></ul>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- WORKSHOPS -->
+  <section class="workshops-section" id="workshops">
+    <h2 class="workshops-title">Warsztaty technologiczne dla dzieci</h2>
+    <p class="workshops-subtitle">Twórcze zajęcia łączące naukę z zabawą</p>
+
+    <div class="workshops-content">
+      <div className="workshops-block">
+        <h3 className="block-title">Jak się uczymy na warsztatach</h3>
+        <ul className="learning-list">
+          <li>Dzieci poznają podstawy programowania poprzez interaktywne gry i zabawy, które rozwijają logiczne myślenie i kreatywność w przyjaznej atmosferze.</li>
+          <li>Pracujemy w małych grupach, co pozwala na indywidualne podejście do każdego uczestnika. Każde dziecko może rozwijać się we własnym tempie.</li>
+          <li>Wykorzystujemy nowoczesne narzędzia edukacyjne dostosowane do wieku uczestników, od robotów programowalnych po aplikacje do tworzenia animacji.</li>
+          <li>Każde zajęcia kończą się prezentacją projektów, co buduje pewność siebie i umiejętność wystąpień publicznych.</li>
+        </ul>
+      </div>
+
+      <div className="workshops-block">
+        <h3 className="block-title">Sposób prowadzenia</h3>
+        <p className="block-text">
+          Warsztaty prowadzone są metodą learning by doing - dzieci uczą się poprzez praktyczne działanie i eksperymentowanie. Każde zajęcia mają jasno określony cel i strukturę, ale pozostawiamy przestrzeń na kreatywność i własne pomysły uczestników. Dbamy o to, by nauka była przygodą, a nie obowiązkiem.
+        </p>
+      </div>
+    </div>
+
+    <div class="clients-grid">
+      <div className="client-hexagon">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="95" textAnchor="middle" fill="#196b5a" fontSize="14" fontWeight="600">Przedszkolaki</text>
+          <text x="100" y="115" textAnchor="middle" fill="#196b5a" fontSize="11">4-6 lat</text>
+        </svg>
+      </div>
+      <div className="client-hexagon">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="95" textAnchor="middle" fill="#196b5a" fontSize="14" fontWeight="600">Młodsi uczniowie</text>
+          <text x="100" y="115" textAnchor="middle" fill="#196b5a" fontSize="11">7-9 lat</text>
+        </svg>
+      </div>
+      <div className="client-hexagon">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="95" textAnchor="middle" fill="#196b5a" fontSize="14" fontWeight="600">Starsi uczniowie</text>
+          <text x="100" y="115" textAnchor="middle" fill="#196b5a" fontSize="11">10-12 lat</text>
+        </svg>
+      </div>
+      <div className="client-hexagon">
+        <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0 L193.3 50 L193.3 150 L100 200 L6.7 150 L6.7 50 Z" fill="#ddeae3" stroke="#196b5a" strokeWidth="2"/>
+          <text x="100" y="95" textAnchor="middle" fill="#196b5a" fontSize="14" fontWeight="600">Nastolatkowie</text>
+          <text x="100" y="115" textAnchor="middle" fill="#196b5a" fontSize="11">13-15 lat</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">×</button>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <ul class="modal-list" id="modalList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

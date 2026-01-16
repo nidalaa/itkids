@@ -4,36 +4,79 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #eef3f0;
-  font-family: 'Inter', sans-serif;
-  color: #196b5a;
-}
-
 .hero-section {
   position: relative;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.hexagon-pattern-left,
+.hexagon-pattern-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+}
+
+.hexagon-pattern-left {
+  left: 0;
+}
+
+.hexagon-pattern-right {
+  right: 0;
+}
+
+.hexagon-pattern-left svg,
+.hexagon-pattern-right svg {
+  width: 100%;
+  height: 100%;
 }
 
 .main-title {
+  color: #196b5a;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
+  text-align: left;
   text-transform: uppercase;
+  letter-spacing: -1px;
+  z-index: 10;
+  position: relative;
+  padding: 0 120px;
+  width: 100%;
 }
 
 .hero-image {
+  width: 100%;
   height: 80px;
-  background: linear-gradient(135deg, #ddeae3, #e0ede6);
+  background: linear-gradient(135deg, #ddeae3 0%, #e0ede6 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #196b5a;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .intro-section {
-  max-width: 1200px;
-  margin: auto;
   padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  color: #196b5a;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .images-grid {
@@ -42,24 +85,145 @@ body {
   gap: 30px;
 }
 
+.hexagon-placeholder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagon-placeholder svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+.hexagon-placeholder:hover svg {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
 .cta-section {
-  text-align: center;
-  padding: 40px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .cta-button {
   background: #196b5a;
-  color: #fff;
-  padding: 20px 50px;
+  color: #eef3f0;
   border: none;
-  font-size: 1.2rem;
+  padding: 24px 60px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 0;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(25, 107, 90, 0.3);
+}
+
+.cta-button:hover {
+  background: #145a4a;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(25, 107, 90, 0.4);
+}
+
+.about-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-box {
+  background: #ddeae3;
+  padding: 60px;
+  border-radius: 0;
+  color: #196b5a;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.about-box p {
+  margin-bottom: 20px;
+}
+
+.about-box p:last-child {
+  margin-bottom: 0;
 }
 
 .workshops-section {
   padding: 80px 20px;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.workshops-title {
+  color: #196b5a;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.workshops-subtitle {
+  color: #196b5a;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0.8;
+}
+
+.workshops-content {
+  margin-bottom: 60px;
+}
+
+.workshops-block {
+  background: #ddeae3;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.block-title {
+  color: #196b5a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learning-list li {
+  color: #196b5a;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.learning-list li:last-child {
+  margin-bottom: 0;
+}
+
+.learning-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #196b5a;
+  font-weight: 600;
+}
+
+.block-text {
+  color: #196b5a;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .clients-grid {
@@ -69,23 +233,34 @@ body {
 }
 
 .client-hexagon {
-  background: #ddeae3;
-  padding: 40px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+}
+
+.client-hexagon svg {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.client-hexagon:hover svg {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .modal-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.modal-overlay.hidden {
-  display: none;
+  z-index: 1000;
 }
 
 .modal-content {
@@ -93,14 +268,101 @@ body {
   padding: 40px;
   max-width: 500px;
   width: 90%;
+  position: relative;
 }
 
 .modal-close {
   position: absolute;
-  right: 20px;
   top: 15px;
+  right: 15px;
   background: none;
   border: none;
   font-size: 1.5rem;
+  color: #196b5a;
   cursor: pointer;
+}
+
+.modal-title {
+  color: #196b5a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-list li {
+  color: #196b5a;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.modal-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #196b5a;
+  font-weight: 600;
+}
+
+.modal-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .hexagon-pattern-left,
+  .hexagon-pattern-right {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .main-title {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-box {
+    padding: 40px 30px;
+  }
+  
+  .hexagon-pattern-left,
+  .hexagon-pattern-right {
+    width: 120px;
+    height: 120px;
+    opacity: 0.5;
+  }
+  
+  .main-title {
+    padding: 0 20px;
+  }
+  
+  .cta-button {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+  }
 }

@@ -1,49 +1,54 @@
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modalTitle');
-const modalList = document.getElementById('modalList');
-const closeModal = document.getElementById('closeModal');
-
 const clientsData = {
   przedszkolaki: {
     title: "Przedszkolaki (4-6 lat)",
     info: [
       "Czas trwania zajęć: 45 minut",
-      "Max 8 dzieci",
-      "Obecność rodzica",
-      "Materiały w cenie",
-      "Weekendowe zajęcia"
+      "Maksymalna liczba uczestników: 8 dzieci",
+      "Wymagana obecność rodzica/opiekuna",
+      "Materiały edukacyjne w cenie",
+      "Zajęcia odbywają się w weekendy"
     ]
   },
   mlodsi: {
     title: "Młodsi uczniowie (7-9 lat)",
     info: [
-      "60 minut",
-      "10 dzieci",
-      "Bez opiekuna",
-      "Materiały w cenie"
+      "Czas trwania zajęć: 60 minut",
+      "Maksymalna liczba uczestników: 10 dzieci",
+      "Możliwość pozostawienia dziecka na zajęciach",
+      "Materiały edukacyjne w cenie",
+      "Zajęcia w tygodniu i weekendy"
     ]
   },
   starsi: {
     title: "Starsi uczniowie (10-12 lat)",
     info: [
-      "90 minut",
-      "Laptop mile widziany",
-      "Projekty domowe"
+      "Czas trwania zajęć: 90 minut",
+      "Maksymalna liczba uczestników: 12 dzieci",
+      "Własny laptop mile widziany",
+      "Projekty do kontynuacji w domu",
+      "Zajęcia w tygodniu i weekendy"
     ]
   },
   nastolatkowie: {
     title: "Nastolatkowie (13-15 lat)",
     info: [
-      "120 minut",
-      "Własny laptop",
-      "Certyfikat"
+      "Czas trwania zajęć: 120 minut",
+      "Maksymalna liczba uczestników: 12 osób",
+      "Wymagany własny laptop",
+      "Certyfikat ukończenia kursu",
+      "Możliwość zajęć indywidualnych"
     ]
   }
 };
 
-document.querySelectorAll('.client-hexagon').forEach(el => {
-  el.addEventListener('click', () => {
-    const key = el.dataset.client;
+const modalOverlay = document.getElementById('modalOverlay');
+const modalTitle = document.getElementById('modalTitle');
+const modalList = document.getElementById('modalList');
+const modalClose = document.getElementById('modalClose');
+
+document.querySelectorAll('.client-hexagon').forEach(hex => {
+  hex.addEventListener('click', () => {
+    const key = hex.dataset.modal;
     const data = clientsData[key];
 
     modalTitle.textContent = data.title;
@@ -55,20 +60,18 @@ document.querySelectorAll('.client-hexagon').forEach(el => {
       modalList.appendChild(li);
     });
 
-    modal.classList.remove('hidden');
+    modalOverlay.style.display = 'flex';
   });
 });
 
-closeModal.addEventListener('click', () => {
-  modal.classList.add('hidden');
+modalOverlay.addEventListener('click', () => {
+  modalOverlay.style.display = 'none';
 });
 
-modal.addEventListener('click', e => {
-  if (e.target === modal) modal.classList.add('hidden');
+modalClose.addEventListener('click', () => {
+  modalOverlay.style.display = 'none';
 });
 
-document.getElementById('scrollToWorkshops')
-  .addEventListener('click', () => {
-    document.getElementById('workshops')
-      .scrollIntoView({ behavior: 'smooth' });
-  });
+document.getElementById('scrollToWorkshops').addEventListener('click', () => {
+  document.getElementById('workshops').scrollIntoView({ behavior: 'smooth' });
+});
