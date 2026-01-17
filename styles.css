@@ -13,6 +13,7 @@
 }
 
 body {
+  background-color: var(--color-background);
   background-image: 
     url("./images/bg-left.png"), 
     url("images/bg-right.png");
@@ -59,6 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .hero-image img {
@@ -66,13 +68,14 @@ body {
 }
 
 .intro-section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .intro-text {
   color: var(--color-primary);
+  background-color: var(--color-background);
   font-size: clamp(1.3rem, 3vw, 2rem);
   font-style: italic;
   text-align: center;
@@ -98,7 +101,7 @@ body {
 
 .hexagon-placeholder img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -161,7 +164,7 @@ body {
   height: 140px;
   object-fit: cover;
 
-  margin: 20a   0 0 20px;
+  margin: -30px -20px 0 0;
   border-radius: 50%;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
