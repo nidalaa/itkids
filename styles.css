@@ -54,14 +54,15 @@ body {
 
 .hero-image {
   width: 100%;
-  height: 80px;
-  background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
+  height: 150px;
+  background-color: var(--color-background) 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary);
-  font-size: 1.2rem;
-  font-weight: 500;
+}
+
+.hero-image img {
+  height: 100%;
 }
 
 .intro-section {
@@ -78,6 +79,8 @@ body {
   line-height: 1.6;
   margin-bottom: 30px;
   font-weight: 400;
+  max-width: 70%;
+  margin: auto;
 }
 
 .images-grid {
@@ -93,15 +96,16 @@ body {
   align-items: center;
 }
 
-.hexagon-placeholder svg {
+.hexagon-placeholder img {
   width: 100%;
   max-width: 280px;
   height: auto;
 }
 
-.hexagon-placeholder:hover svg {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+.hexagon-placeholder svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 
 .cta-section {
