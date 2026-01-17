@@ -27,7 +27,6 @@ body {
   position: relative;
   padding: 30px 20px;
   overflow: hidden;
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100px;
@@ -43,8 +42,14 @@ body {
   letter-spacing: -1px;
   z-index: 10;
   position: relative;
-  padding: 0 120px;
+  padding: 0 200px;
   width: 100%;
+}
+
+.subtitle {
+  color: #555454;
+  padding-left: 300px;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
 }
 
 .hero-image {
@@ -284,6 +289,7 @@ body {
   .clients-grid { grid-template-columns: repeat(2, 1fr); }
   .images-grid { grid-template-columns: 1fr; }
   .main-title { padding: 0 20px; }
+  .subtitle { padding: 0 50px; }
 }
 
 @media (max-width: 480px) {
