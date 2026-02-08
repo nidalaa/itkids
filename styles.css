@@ -25,6 +25,7 @@ body {
 }
 
 .hero-section {
+  background-color: var(--color-background);
   position: relative;
   padding: 30px 20px;
   overflow: hidden;
@@ -180,6 +181,7 @@ body {
 .workshops-title {
   font-family: var(--font-heading);
   color: var(--color-primary);
+  background-color: var(--color-background);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
   text-align: center;
@@ -190,6 +192,7 @@ body {
 .workshops-subtitle {
   font-family: var(--font-text);
   color: var(--color-primary);
+  background-color: var(--color-background);
   font-size: 1.2rem;
   font-style: italic;
   text-align: center;
