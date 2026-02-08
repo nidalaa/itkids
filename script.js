@@ -1,42 +1,43 @@
 const clientsData = {
-  przedszkolaki: {
-    title: "Przedszkolaki (4-6 lat)",
+  kultura: {
+    title: "Ośrodki kultury",
     info: [
-      "Czas trwania zajęć: 45 minut",
-      "Maksymalna liczba uczestników: 8 dzieci",
-      "Wymagana obecność rodzica/opiekuna",
-      "Materiały edukacyjne w cenie",
-      "Zajęcia odbywają się w weekendy"
+      "Gotowy program i materiały, potrzebuję jedynie stolików",
+      "Dzieci w wieku 8-12 lat",
+      "Małe grupy: 9-12 osób",
+      "Czas trwania pojedynczego warsztatu 1,5h-2h",
+      "Pojedyncze zajęcia lub cykl 3 warsztatów",
+      "KONTAKT: kontakt@itkids.pl"
     ]
   },
-  mlodsi: {
-    title: "Młodsi uczniowie (7-9 lat)",
+  rodzice: {
+    title: "Rodzice",
     info: [
-      "Czas trwania zajęć: 60 minut",
-      "Maksymalna liczba uczestników: 10 dzieci",
-      "Możliwość pozostawienia dziecka na zajęciach",
-      "Materiały edukacyjne w cenie",
-      "Zajęcia w tygodniu i weekendy"
+      "Dzień warsztatowy lub impreza urodzinowa",
+      "Tematyka dostosowana do wieku uczestników",
+      "Czas trwania min 1,5h",
+      "KONTAKT: kontakt@itkids.pl"
     ]
   },
-  starsi: {
-    title: "Starsi uczniowie (10-12 lat)",
+  firmy: {
+    title: "Firmy",
     info: [
-      "Czas trwania zajęć: 90 minut",
-      "Maksymalna liczba uczestników: 12 dzieci",
-      "Własny laptop mile widziany",
-      "Projekty do kontynuacji w domu",
-      "Zajęcia w tygodniu i weekendy"
+      "Dzień warsztatowy dla dzieci pracowników",
+      "Tematyka dostosowana do wieku uczestników",
+      "Czas trwania min 1,5h",
+      "Pojedyncze zajęcia lub cykl 4 warsztatów",
+      "KONTAKT: kontakt@itkids.pl"
     ]
   },
-  nastolatkowie: {
-    title: "Nastolatkowie (13-15 lat)",
+  szkoly: {
+    title: "Szkoły",
     info: [
-      "Czas trwania zajęć: 120 minut",
-      "Maksymalna liczba uczestników: 12 osób",
-      "Wymagany własny laptop",
-      "Certyfikat ukończenia kursu",
-      "Możliwość zajęć indywidualnych"
+      "Klasy 1-3",
+      "Dzieci w wieku 8-12 lat",
+      "Tematyka dostosowana do wieku oraz liczby uczestników",
+      "Czas trwania pojedynczego warsztatu 1,5h",
+      "Pojedyncze zajęcia lub cykl 3 warsztatów",
+      "KONTAKT: kontakt@itkids.pl"
     ]
   }
 };
