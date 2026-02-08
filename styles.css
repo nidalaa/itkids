@@ -26,6 +26,7 @@ body {
 
 .hero-section {
   background-color: var(--color-background);
+  opacity: 0.9;
   padding: 5px;
   position: relative;
   margin: 30px 20px;
@@ -66,7 +67,8 @@ body {
 }
 
 .hero-image img {
-  height: 100%;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .intro-section {
@@ -78,6 +80,7 @@ body {
 .intro-text {
   color: var(--color-primary);
   background-color: var(--color-background);
+  opacity: 0.9;
   font-size: clamp(1.3rem, 3vw, 2rem);
   font-style: italic;
   text-align: center;
@@ -183,6 +186,7 @@ body {
   font-family: var(--font-heading);
   color: var(--color-primary);
   background-color: var(--color-background);
+  opacity: 0.9;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
   text-align: center;
@@ -200,7 +204,7 @@ body {
   width: fit-content;
   text-align: center;
   margin: 0px auto 50px auto;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .workshops-block {
