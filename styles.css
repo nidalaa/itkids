@@ -27,11 +27,12 @@ body {
 .hero-section {
   background-color: var(--color-background);
   position: relative;
-  padding: 30px 20px;
+  margin: 30px 20px;
+  margin-left: 200px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  min-height: 100px;
+  width: fit-content;
 }
 
 .main-title {
@@ -44,13 +45,12 @@ body {
   letter-spacing: -1px;
   z-index: 10;
   position: relative;
-  padding: 0 200px;
   width: 100%;
 }
 
 .subtitle {
   color: #555454;
-  padding-left: 300px;
+  padding-left: 100px;
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
 }
 
@@ -315,8 +315,8 @@ body {
 @media (max-width: 768px) {
   .clients-grid { grid-template-columns: repeat(2, 1fr); }
   .images-grid { grid-template-columns: 1fr; }
-  .main-title { padding: 0 20px; }
-  .subtitle { padding: 0 50px; }
+  .hero-section { margin: 0 0 0 20px; }
+  .subtitle { padding: 0 30px; }
 }
 
 @media (max-width: 480px) {
